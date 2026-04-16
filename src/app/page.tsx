@@ -180,13 +180,133 @@ export default function Home() {
 
       {/* ===== LOCATION SECTION ===== */}
       <section id="location" className="scroll-mt-20 bg-surface py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-primary sm:text-5xl">
-            Our Location
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-light">
-            Find us in North Parramatta. Map and directions coming soon.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl">
+              Our Location
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-light">
+              Visit us at our North Parramatta yard — easy to find and plenty of
+              room to unload.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-5">
+            {/* Map */}
+            <div className="overflow-hidden rounded-xl border border-gray-light shadow-sm lg:col-span-3">
+              <iframe
+                title="Betterway Metal location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.8!2d151.0!3d-33.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTIgTm9ydGggUm9ja3MgUm9hZCwgTm9ydGggUGFycmFtYXR0YSBOU1cgMjE1MQ!5e0!3m2!1sen!2sau!4v1700000000000&q=12+North+Rocks+Road,+North+Parramatta+NSW+2151"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            {/* Business details */}
+            <div className="flex flex-col justify-center lg:col-span-2">
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary">Address</h3>
+                  <p className="mt-1 text-text-light">
+                    12 North Rocks Road
+                    <br />
+                    North Parramatta, NSW 2151
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=12+North+Rocks+Road,+North+Parramatta+NSW+2151"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm font-medium text-accent hover:underline"
+                  >
+                    Get Directions &rarr;
+                  </a>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="mt-6 flex items-start gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary">Phone</h3>
+                  <a
+                    href="tel:0426515998"
+                    className="mt-1 block text-text-light transition-colors hover:text-accent"
+                  >
+                    0426 515 998
+                  </a>
+                  <p className="mt-1 text-sm text-text-light">
+                    Call or text anytime
+                  </p>
+                </div>
+              </div>
+
+              {/* Opening hours */}
+              <div className="mt-6 flex items-start gap-4">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary">Opening Hours</h3>
+                  <div className="mt-1 space-y-0.5 text-sm text-text-light">
+                    <p>Mon – Fri: 7:00 AM – 5:00 PM</p>
+                    <p>Saturday: 8:00 AM – 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
