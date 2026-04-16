@@ -18,7 +18,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-primary sticky top-0 z-50 shadow-md">
+    <header className="bg-white sticky top-0 z-50 shadow-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -38,7 +38,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-dark hover:text-accent"
+              className="rounded-md px-3 py-2 text-lg font-medium text-primary transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -48,7 +48,7 @@ export default function Header() {
         {/* Mobile hamburger button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-primary-dark md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-primary hover:text-accent md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label="Toggle navigation menu"
@@ -67,13 +67,13 @@ export default function Header() {
 
       {/* Mobile menu dropdown */}
       {mobileOpen && (
-        <nav className="border-t border-primary-dark bg-primary md:hidden">
+        <nav className="border-t border-gray-light bg-white md:hidden">
           <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-white transition-colors hover:bg-primary-dark hover:text-accent"
+                className="block rounded-md px-3 py-2 text-lg font-medium text-primary transition-colors hover:text-accent"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
