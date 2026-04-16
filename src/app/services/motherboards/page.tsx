@@ -4,7 +4,7 @@ export default function MotherboardsPage() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <Link
-        href="/services"
+        href="/#services"
         className="text-sm font-medium text-accent hover:underline"
       >
         &larr; Back to Services
@@ -33,7 +33,7 @@ export default function MotherboardsPage() {
 
       <div className="mt-10">
         <Link
-          href="/contact"
+          href="/#contact"
           className="inline-block rounded-lg bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg transition-colors hover:bg-accent-dark"
         >
           Get a Quote for Motherboards

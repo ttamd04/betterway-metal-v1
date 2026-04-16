@@ -10,11 +10,30 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Betterway Recycling | Scrap Metal Recycling",
+  title: "Betterway Metal | Scrap Metal Recycling in North Parramatta",
   description:
-    "Betterway Recycling — your trusted partner for scrap metal recycling services.",
+    "Fair prices and fast service for all scrap metal — copper, aluminium, brass, steel, cables, batteries and more. North Parramatta's trusted scrap metal recycler. Call 0426 515 998.",
+  keywords: [
+    "scrap metal",
+    "recycling",
+    "North Parramatta",
+    "copper",
+    "aluminium",
+    "brass",
+    "steel",
+    "scrap yard",
+    "metal recycler",
+    "Sydney",
+  ],
   icons: {
     icon: "/betterway-favicon.png",
+  },
+  openGraph: {
+    title: "Betterway Metal | Scrap Metal Recycling in North Parramatta",
+    description:
+      "Fair prices and fast service for all scrap metal. North Parramatta's trusted recycler.",
+    type: "website",
+    locale: "en_AU",
   },
 };
 

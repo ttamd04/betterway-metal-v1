@@ -1,8 +1,5 @@
-export default function FAQ() {
-  return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-primary">FAQ</h1>
-      <p className="mt-4 text-text-light">FAQ page — content coming soon.</p>
-    </section>
-  );
+import { redirect } from "next/navigation";
+
+export default function Page() {
+  redirect("/#faq");
 }
