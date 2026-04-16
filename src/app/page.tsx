@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReviewCarousel from "@/components/ReviewCarousel";
 import ContactForm from "@/components/ContactForm";
+import FaqAccordion from "@/components/FaqAccordion";
 import {
   CircleDot,
   Cpu,
@@ -415,11 +416,20 @@ export default function Home() {
 
       {/* ===== FAQ SECTION ===== */}
       <section id="faq" className="scroll-mt-20 bg-bg py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-primary sm:text-5xl">FAQ</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-light">
-            Frequently asked questions coming soon.
-          </p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl">
+              Frequently Asked Questions
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-light">
+              Got questions? We&apos;ve got answers. If you can&apos;t find what
+              you&apos;re looking for, give us a call.
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <FaqAccordion />
+          </div>
         </div>
       </section>
 
