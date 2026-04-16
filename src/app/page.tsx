@@ -87,25 +87,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {services.map((service) => {
               const Icon = iconMap[service.slug];
               return (
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="group rounded-xl border border-gray-light bg-surface p-6 shadow-sm transition-all hover:border-accent hover:shadow-md"
+                  className="group rounded-xl border border-gray-light bg-surface p-5 shadow-sm transition-all hover:border-accent hover:shadow-md"
                 >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-accent/20 group-hover:text-accent">
-                    <Icon className="h-6 w-6" />
+                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-accent/20 group-hover:text-accent">
+                    <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-xl font-semibold text-primary">
+                  <h3 className="text-base font-semibold text-primary">
                     {service.name}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-text-light">
+                  <p className="mt-1.5 text-xs leading-relaxed text-text-light line-clamp-3">
                     {service.description}
                   </p>
-                  <span className="mt-4 inline-block text-sm font-medium text-accent group-hover:underline">
+                  <span className="mt-3 inline-block text-xs font-medium text-accent group-hover:underline">
                     Learn more &rarr;
                   </span>
                 </Link>
