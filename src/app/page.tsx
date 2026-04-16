@@ -7,10 +7,7 @@ import {
   CircleDot,
   Cpu,
   BatteryMedium,
-  Cable,
-  Cog,
   Container,
-  Droplets,
   Flame,
   Refrigerator,
   Disc,
@@ -22,19 +19,16 @@ import { services } from "@/lib/services";
 import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
-  aluminium: Boxes,
-  batteries: BatteryMedium,
-  brass: Gem,
-  cables: Cable,
-  compressors: Cog,
   copper: CircleDot,
-  lead: Droplets,
-  motherboards: Cpu,
-  motors: Zap,
-  radiators: Flame,
+  brass: Gem,
+  aluminium: Boxes,
   "stainless-steel": Disc,
-  steel: Container,
   "white-goods": Refrigerator,
+  steel: Container,
+  "e-waste": Cpu,
+  radiators: Flame,
+  batteries: BatteryMedium,
+  "motors-compressors": Zap,
 };
 
 export default function Home() {
@@ -355,82 +349,12 @@ export default function Home() {
                   </td>
                 </tr>
 
-                {/* Lead */}
+                {/* White Goods */}
                 <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">Lead</td>
-                  <td className="px-6 py-3 text-sm text-text-light">All Lead (wheel weights, sheet, pipe)</td>
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">White Goods</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Fridges, Washers, Dryers, Ovens</td>
                   <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $2.00 – $2.50
-                  </td>
-                </tr>
-
-                {/* Radiators */}
-                <tr className="transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
-                    Radiators
-                  </td>
-                  <td className="px-6 py-3 text-sm text-text-light">Copper / Brass Radiators</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $3.50 – $4.50
-                  </td>
-                </tr>
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm text-text-light">Aluminium Radiators</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $1.00 – $1.50
-                  </td>
-                </tr>
-
-                {/* Cables */}
-                <tr className="transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
-                    Cables
-                  </td>
-                  <td className="px-6 py-3 text-sm text-text-light">Domestic Cable</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $2.50 – $3.50
-                  </td>
-                </tr>
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm text-text-light">Communications Cable</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $1.00 – $2.00
-                  </td>
-                </tr>
-
-                {/* Batteries */}
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">Batteries</td>
-                  <td className="px-6 py-3 text-sm text-text-light">Car / Truck Batteries</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $0.50 – $0.80
-                  </td>
-                </tr>
-
-                {/* Motors */}
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">Motors</td>
-                  <td className="px-6 py-3 text-sm text-text-light">Electric Motors (all sizes)</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $0.80 – $1.50
-                  </td>
-                </tr>
-
-                {/* Motherboards */}
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">Motherboards</td>
-                  <td className="px-6 py-3 text-sm text-text-light">Computer / Circuit Boards</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $3.00 – $5.00
-                  </td>
-                </tr>
-
-                {/* Compressors */}
-                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">Compressors</td>
-                  <td className="px-6 py-3 text-sm text-text-light">AC / Fridge Compressors</td>
-                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    $0.30 – $0.60
+                    Free drop-off
                   </td>
                 </tr>
 
@@ -451,12 +375,63 @@ export default function Home() {
                   </td>
                 </tr>
 
-                {/* White Goods */}
+                {/* E-Waste */}
                 <tr className="transition-colors hover:bg-bg/50">
-                  <td className="px-6 py-3 text-sm font-semibold text-primary">White Goods</td>
-                  <td className="px-6 py-3 text-sm text-text-light">Fridges, Washers, Dryers, Ovens</td>
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    E-Waste
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Motherboards / Circuit Boards</td>
                   <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
-                    Free drop-off
+                    $3.00 – $5.00
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Mixed E-Waste</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.50 – $1.50
+                  </td>
+                </tr>
+
+                {/* Radiators */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Radiators
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Copper / Brass Radiators</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $3.50 – $4.50
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Aluminium Radiators</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.00 – $1.50
+                  </td>
+                </tr>
+
+                {/* Batteries */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Batteries</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Car / Truck Batteries</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.50 – $0.80
+                  </td>
+                </tr>
+
+                {/* Motors / Compressors */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Motors / Compressors
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Electric Motors (all sizes)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.80 – $1.50
+                  </td>
+                </tr>
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">AC / Fridge Compressors</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.30 – $0.60
                   </td>
                 </tr>
               </tbody>

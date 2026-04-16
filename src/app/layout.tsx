@@ -12,15 +12,16 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Betterway Metal | Scrap Metal Recycling in North Parramatta",
   description:
-    "Fair prices and fast service for all scrap metal — copper, aluminium, brass, steel, cables, batteries and more. North Parramatta's trusted scrap metal recycler. Call 0426 515 998.",
+    "Fair prices and fast service for all scrap metal — copper, brass, aluminium, stainless steel, e-waste, radiators, batteries, motors and more. North Parramatta's trusted scrap metal recycler. Call 0426 515 998.",
   keywords: [
     "scrap metal",
     "recycling",
     "North Parramatta",
     "copper",
-    "aluminium",
     "brass",
-    "steel",
+    "aluminium",
+    "stainless steel",
+    "e-waste",
     "scrap yard",
     "metal recycler",
     "Sydney",

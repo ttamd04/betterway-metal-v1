@@ -3,10 +3,7 @@ import {
   CircleDot,
   Cpu,
   BatteryMedium,
-  Cable,
-  Cog,
   Container,
-  Droplets,
   Flame,
   Refrigerator,
   Disc,
@@ -15,107 +12,20 @@ import {
   Boxes,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { services } from "@/lib/services";
 
-type Service = {
-  slug: string;
-  name: string;
-  description: string;
-  icon: LucideIcon;
+const iconMap: Record<string, LucideIcon> = {
+  copper: CircleDot,
+  brass: Gem,
+  aluminium: Boxes,
+  "stainless-steel": Disc,
+  "white-goods": Refrigerator,
+  steel: Container,
+  "e-waste": Cpu,
+  radiators: Flame,
+  batteries: BatteryMedium,
+  "motors-compressors": Zap,
 };
-
-const services: Service[] = [
-  {
-    slug: "aluminium",
-    name: "Aluminium",
-    description:
-      "We buy all grades of aluminium including cans, extrusions, cast, and sheet aluminium at competitive prices.",
-    icon: Boxes,
-  },
-  {
-    slug: "batteries",
-    name: "Batteries",
-    description:
-      "Safe disposal and recycling of car batteries, truck batteries, and industrial batteries.",
-    icon: BatteryMedium,
-  },
-  {
-    slug: "brass",
-    name: "Brass",
-    description:
-      "Top prices for all types of brass including plumbing fittings, taps, valves, and mixed brass.",
-    icon: Gem,
-  },
-  {
-    slug: "cables",
-    name: "Cables",
-    description:
-      "We accept all types of electrical cable and wiring — domestic, industrial, and communications cable.",
-    icon: Cable,
-  },
-  {
-    slug: "compressors",
-    name: "Compressors",
-    description:
-      "Recycling of air conditioning and refrigeration compressors. We handle all sizes.",
-    icon: Cog,
-  },
-  {
-    slug: "copper",
-    name: "Copper",
-    description:
-      "Premium rates for all copper grades — bright copper, #1 copper, #2 copper, and copper pipe.",
-    icon: CircleDot,
-  },
-  {
-    slug: "lead",
-    name: "Lead",
-    description:
-      "Environmentally responsible recycling of lead including wheel weights, sheet lead, and lead pipe.",
-    icon: Droplets,
-  },
-  {
-    slug: "motherboards",
-    name: "Motherboards",
-    description:
-      "E-waste recycling for computer motherboards and circuit boards. Precious metal recovery at fair rates.",
-    icon: Cpu,
-  },
-  {
-    slug: "motors",
-    name: "Motors",
-    description:
-      "Electric motors of all sizes — from small appliance motors to large industrial motors.",
-    icon: Zap,
-  },
-  {
-    slug: "radiators",
-    name: "Radiators",
-    description:
-      "Copper and aluminium radiators from cars, trucks, and industrial equipment at competitive rates.",
-    icon: Flame,
-  },
-  {
-    slug: "stainless-steel",
-    name: "Stainless Steel",
-    description:
-      "All grades of stainless steel accepted — sinks, benchtops, cookware, and industrial stainless.",
-    icon: Disc,
-  },
-  {
-    slug: "steel",
-    name: "Steel",
-    description:
-      "General steel and heavy steel — structural beams, roofing, fencing, and mixed ferrous metals.",
-    icon: Container,
-  },
-  {
-    slug: "white-goods",
-    name: "White Goods",
-    description:
-      "Free drop-off for fridges, washing machines, dryers, ovens, and other household appliances.",
-    icon: Refrigerator,
-  },
-];
 
 export default function Services() {
   return (
@@ -132,7 +42,7 @@ export default function Services() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => {
-          const Icon = service.icon;
+          const Icon = iconMap[service.slug];
           return (
             <Link
               key={service.slug}

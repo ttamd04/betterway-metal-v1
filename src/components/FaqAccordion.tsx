@@ -11,7 +11,7 @@ const faqs: FaqItem[] = [
   {
     question: "What types of scrap metal do you accept?",
     answer:
-      "We accept a wide range of metals including copper, brass, aluminium, stainless steel, steel, lead, cables, batteries, motors, motherboards, radiators, compressors, and white goods (fridges, washing machines, etc.). If you're unsure whether we'll take something, give us a call on 0426 515 998 and we'll let you know.",
+      "We accept a wide range of metals including copper, brass, aluminium, stainless steel, steel, radiators, batteries, motors, compressors, e-waste (motherboards, circuit boards), and white goods (fridges, washing machines, etc.). If you're unsure whether we'll take something, give us a call on 0426 515 998 and we'll let you know.",
   },
   {
     question: "How do I know what my scrap is worth?",
