@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ReviewCarousel from "@/components/ReviewCarousel";
+import ContactForm from "@/components/ContactForm";
 import {
   CircleDot,
   Cpu,
@@ -322,20 +323,109 @@ export default function Home() {
 
       {/* ===== CONTACT SECTION ===== */}
       <section id="contact" className="scroll-mt-20 bg-surface py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-primary sm:text-5xl">
-            Contact Us
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-text-light">
-            Contact form coming soon. In the meantime, call or text us on{" "}
-            <a
-              href="tel:0426515998"
-              className="font-semibold text-accent underline underline-offset-2 hover:text-primary"
-            >
-              0426 515 998
-            </a>
-            .
-          </p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-5">
+            {/* Left side — info */}
+            <div className="lg:col-span-2">
+              <h2 className="text-4xl font-bold text-primary sm:text-5xl">
+                Get in Touch
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-text-light">
+                Have scrap metal to sell? Need a quote? Send us a message and
+                we&apos;ll get back to you quickly — or just give us a call.
+              </p>
+
+              <div className="mt-8 space-y-5">
+                {/* Phone */}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-text">Call or text</p>
+                    <a
+                      href="tel:0426515998"
+                      className="text-lg font-semibold text-accent hover:underline"
+                    >
+                      0426 515 998
+                    </a>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-text">Visit us</p>
+                    <p className="text-text-light">
+                      12 North Rocks Rd, North Parramatta
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-text">Hours</p>
+                    <p className="text-text-light">
+                      Mon–Fri 7am–5pm · Sat 8am–2pm
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side — form */}
+            <div className="rounded-xl border border-gray-light bg-bg p-6 shadow-sm sm:p-8 lg:col-span-3">
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </section>
     </>
