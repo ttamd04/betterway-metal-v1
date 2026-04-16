@@ -18,10 +18,10 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
-        <h1 className="inline-block rounded-xl bg-primary/80 px-6 py-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="inline-block rounded-xl bg-primary/30 px-6 py-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
           Fair prices, fast service, and a better way forward.
         </h1>
-        <p className="mx-auto mt-6 inline-block max-w-2xl rounded-lg bg-primary/70 px-5 py-3 text-lg leading-relaxed text-gray-200 sm:text-xl">
+        <p className="mx-auto mt-6 inline-block max-w-2xl rounded-lg bg-primary/25 px-5 py-3 text-lg leading-relaxed text-gray-200 sm:text-xl">
           In and out in minutes. Betterway Metal provides fair prices and a
           quick turnaround for scrap metal. North Parramatta&apos;s go-to scrap
           yard. Call or text us now on{" "}
