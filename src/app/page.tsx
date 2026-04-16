@@ -237,8 +237,242 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== PRICE LIST SECTION ===== */}
+      <section id="prices" className="scroll-mt-20 bg-bg py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl">
+              Price List
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-light">
+              Our current scrap metal prices. Rates are updated regularly based
+              on market conditions. Call{" "}
+              <a
+                href="tel:0426515998"
+                className="font-semibold text-accent hover:underline"
+              >
+                0426 515 998
+              </a>{" "}
+              for a live quote.
+            </p>
+          </div>
+
+          <div className="mt-12 overflow-hidden rounded-xl border border-gray-light bg-white shadow-sm">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-primary text-left text-white">
+                  <th className="px-6 py-4 text-sm font-semibold">Metal</th>
+                  <th className="px-6 py-4 text-sm font-semibold">Grade / Type</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold">
+                    Price (per kg)
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-light">
+                {/* Copper */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={4}>
+                    Copper
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Bright / Shiny Copper</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $10.50 – $11.00
+                  </td>
+                </tr>
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">#1 Copper Pipe</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $9.80 – $10.30
+                  </td>
+                </tr>
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">#2 Copper (Mixed)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $8.50 – $9.20
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Insulated Copper Wire</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $3.00 – $5.50
+                  </td>
+                </tr>
+
+                {/* Brass */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Brass
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Clean Brass (taps, fittings)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $5.50 – $6.00
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Mixed Brass</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $4.00 – $4.80
+                  </td>
+                </tr>
+
+                {/* Aluminium */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={3}>
+                    Aluminium
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Clean Aluminium (extrusions)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.80 – $2.20
+                  </td>
+                </tr>
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Aluminium Cans</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.80 – $1.10
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Cast Aluminium</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.20 – $1.60
+                  </td>
+                </tr>
+
+                {/* Stainless Steel */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Stainless Steel
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">304 Grade</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.50 – $2.00
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Mixed Stainless</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.80 – $1.20
+                  </td>
+                </tr>
+
+                {/* Lead */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Lead</td>
+                  <td className="px-6 py-3 text-sm text-text-light">All Lead (wheel weights, sheet, pipe)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $2.00 – $2.50
+                  </td>
+                </tr>
+
+                {/* Radiators */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Radiators
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Copper / Brass Radiators</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $3.50 – $4.50
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Aluminium Radiators</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.00 – $1.50
+                  </td>
+                </tr>
+
+                {/* Cables */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Cables
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Domestic Cable</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $2.50 – $3.50
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Communications Cable</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $1.00 – $2.00
+                  </td>
+                </tr>
+
+                {/* Batteries */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Batteries</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Car / Truck Batteries</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.50 – $0.80
+                  </td>
+                </tr>
+
+                {/* Motors */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Motors</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Electric Motors (all sizes)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.80 – $1.50
+                  </td>
+                </tr>
+
+                {/* Motherboards */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Motherboards</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Computer / Circuit Boards</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $3.00 – $5.00
+                  </td>
+                </tr>
+
+                {/* Compressors */}
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">Compressors</td>
+                  <td className="px-6 py-3 text-sm text-text-light">AC / Fridge Compressors</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.30 – $0.60
+                  </td>
+                </tr>
+
+                {/* Steel */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary" rowSpan={2}>
+                    Steel
+                  </td>
+                  <td className="px-6 py-3 text-sm text-text-light">Heavy Steel (beams, plate)</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.20 – $0.35
+                  </td>
+                </tr>
+                <tr className="border-b-2 border-gray-light transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm text-text-light">Light / Mixed Steel</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    $0.10 – $0.20
+                  </td>
+                </tr>
+
+                {/* White Goods */}
+                <tr className="transition-colors hover:bg-bg/50">
+                  <td className="px-6 py-3 text-sm font-semibold text-primary">White Goods</td>
+                  <td className="px-6 py-3 text-sm text-text-light">Fridges, Washers, Dryers, Ovens</td>
+                  <td className="px-6 py-3 text-right text-sm font-semibold text-accent">
+                    Free drop-off
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-6 text-center text-sm text-text-light">
+            Prices are indicative and subject to change based on market
+            conditions, quantity, and metal condition. For an exact quote, bring
+            your scrap in or give us a call.
+          </p>
+        </div>
+      </section>
+
       {/* ===== REVIEWS SECTION ===== */}
-      <section id="reviews" className="scroll-mt-20 bg-bg py-20">
+      <section id="reviews" className="scroll-mt-20 bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-primary sm:text-5xl">
@@ -283,7 +517,7 @@ export default function Home() {
       </section>
 
       {/* ===== LOCATION SECTION ===== */}
-      <section id="location" className="scroll-mt-20 bg-surface py-20">
+      <section id="location" className="scroll-mt-20 bg-bg py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-primary sm:text-5xl">
@@ -415,7 +649,7 @@ export default function Home() {
       </section>
 
       {/* ===== FAQ SECTION ===== */}
-      <section id="faq" className="scroll-mt-20 bg-bg py-20">
+      <section id="faq" className="scroll-mt-20 bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-primary sm:text-5xl">
@@ -434,7 +668,7 @@ export default function Home() {
       </section>
 
       {/* ===== CONTACT SECTION ===== */}
-      <section id="contact" className="scroll-mt-20 bg-surface py-20">
+      <section id="contact" className="scroll-mt-20 bg-bg py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Left side — info */}
